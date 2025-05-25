@@ -36,22 +36,6 @@ class TextNode:
     def __eq__(self, other_node):
         return (self.text == other_node.text) and (self.text_type == other_node.text_type) and (self.url == other_node.url)
     
-    #def text_node_to_html_node(text_node):
-    #    if text_node.text_type not in TextType:
-    #        raise Exception("not valid TextType")
-    #    match text_node.text_type:
-    #        case TextType.TEXT:
-    #            return LeafNode(None, text_node.text)
-    #        case TextType.BOLD:
-    #            return LeafNode("b", text_node.text)
-    #        case TextNode.ITALIC:
-    #            return LeafNode("i", text_node.text)
-    #        case TextNode.CODE:
-    #            return LeafNode("code", text_node.text)
-    #        case TextNode.LINK:
-    #            return LeafNode("a", text_node.text, {"href": text_node.url})
-    #        case TextNode.IMAGE:
-    #            return LeafNode("img", "", {"src": text_node.url, "alt": text_node.text})
 
 
     def __repr__(self):

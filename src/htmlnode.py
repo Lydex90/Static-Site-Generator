@@ -1,3 +1,9 @@
+from blocks import (
+    BlockType,
+    block_to_block_type,
+    markdown_to_blocks
+)
+
 
 class HTMLNode:
     def __init__(self, tag = None, value = None, children = None, props = None):
@@ -53,3 +59,11 @@ class ParentNode(HTMLNode):
         html_string += f'</{self.tag}>'
 
         return html_string
+    
+
+def markdown_to_html_node(markdown):
+    html_nodes = []
+    blocks = markdown_to_blocks(markdown)
+    for block in blocks:
+        nu_node = HTMLNode(block_to_block_type(block), block,
+    return
