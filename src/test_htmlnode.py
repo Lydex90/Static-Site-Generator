@@ -1,8 +1,12 @@
 import unittest
-from htmlnode import HTMLNode, LeafNode, ParentNode
+from htmlnode import (
+    HTMLNode,
+    LeafNode,
+    ParentNode,
+)
 
 
-class TestTextNode(unittest.TestCase):
+class TestHtmlNode(unittest.TestCase):
     def test_props_to_html1(self):
         node = HTMLNode(None, None, None, {"href": "https://www.google.com","target": "_blank",})
         self.assertEqual( node.props_to_html(), ' href="https://www.google.com" target="_blank"')
@@ -114,6 +118,7 @@ class TestTextNode(unittest.TestCase):
             node.to_html(),
             "<h2><b>Bold text</b>Normal text<i>italic text</i>Normal text</h2>",
         )
+
 
 if __name__ == "__main__":
     unittest.main()

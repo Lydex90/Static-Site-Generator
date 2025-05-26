@@ -1,8 +1,3 @@
-from blocks import (
-    BlockType,
-    block_to_block_type,
-    markdown_to_blocks
-)
 
 
 class HTMLNode:
@@ -61,9 +56,4 @@ class ParentNode(HTMLNode):
         return html_string
     
 
-def markdown_to_html_node(markdown):
-    html_nodes = []
-    blocks = markdown_to_blocks(markdown)
-    for block in blocks:
-        nu_node = HTMLNode(block_to_block_type(block), block,
-    return
+

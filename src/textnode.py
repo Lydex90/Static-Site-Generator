@@ -4,11 +4,11 @@ from htmlnode import LeafNode
 
 class TextType(Enum):
     TEXT = "text"
-    BOLD = "**Bold text**"
-    ITALIC = "_Italic text_"
-    CODE = "`Code text`"
-    LINK = "[anchor text](url)"
-    IMAGE = "![alt text](url)"
+    BOLD = "bold"
+    ITALIC = "italic"
+    CODE = "code"
+    LINK = "link"
+    IMAGE = "image"
 
 def text_node_to_html_node(text_node):
         if not isinstance(text_node.text_type, TextType):
